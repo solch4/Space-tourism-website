@@ -64,3 +64,26 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+/* ============================================================
+  PERSONAL STYLE
+============================================================ */
+@import './styles/base/settings';
+
+body {
+  font-family: $ff-sans-normal;
+  font-size: $fs-400;
+
+  color: $clr-white;
+  background-color: $clr-dark;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}

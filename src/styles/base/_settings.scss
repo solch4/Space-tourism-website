@@ -1,0 +1,155 @@
+/* ==================================================================
+  CUSTOM PROPERTIES
+================================================================== */
+
+/* colors */
+$clr-dark: hsl(230, 35%, 7%);
+$clr-light: hsl(231, 77%, 90%);
+$clr-white: hsl(0, 0%, 100%);
+
+/* font-sizes */
+$fs-900: 9.375rem;
+$fs-800: 6.25rem;
+$fs-700: 3.5rem;
+$fs-600: 2rem;
+$fs-500: 1.75rem;
+$fs-400: 1.125rem;
+$fs-300: 1rem;
+$fs-200: 0.875rem;
+
+/* font-families */
+$ff-serif: "Bellefair", serif;
+$ff-sans-cond: "Barlow Condensed", sans-serif;
+$ff-sans-normal: "Barlow", sans-serif;
+
+/* ==================================================================
+  UTILITY CLASSES
+================================================================== */
+
+@mixin flex($gap: 1rem) {
+  display: flex;
+  gap: $gap;
+}
+
+.flex {
+  @include flex();
+}
+
+@mixin grid($gap: 1rem) {
+  display: grid;
+  gap: $gap;
+}
+
+.grid {
+  @include grid();
+}
+
+@mixin flow($flow-space: 1rem) {
+  margin-top: $flow-space;
+}
+/* .flow > *:not(:last-child) {
+  margin-bottom: 1rem;
+} */
+/* .flow > *:not(:first-child) {
+  margin-top: 1rem;
+} */
+.flow > *:where(:not(:first-child)) {
+  @include flow();
+}
+
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* colors */
+
+.bg-dark {
+  background-color: $clr-dark;
+}
+.bg-accent {
+  background-color: $clr-light;
+}
+.bg-white {
+  background-color: $clr-white;
+}
+.text-dark {
+  color: $clr-dark;
+}
+.text-accent {
+  color: $clr-light;
+}
+.text-white {
+  color: $clr-white;
+}
+
+/* typography */
+
+.ff-serif {
+  font-family: $ff-serif;
+}
+.ff-sans-cond {
+  font-family: $ff-sans-cond;
+}
+.ff-sans-normal {
+  font-family: $ff-sans-normal;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+.letter-spacing-2 {
+  letter-spacing: 2.7px;
+}
+.letter-spacing-3 {
+  letter-spacing: 2.35px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fs-900 {
+  font-size: $fs-900;
+}
+.fs-800 {
+  font-size: $fs-800;
+}
+.fs-700 {
+  font-size: $fs-700;
+}
+.fs-600 {
+  font-size: $fs-600;
+}
+.fs-500 {
+  font-size: $fs-500;
+}
+.fs-400 {
+  font-size: $fs-400;
+}
+.fs-300 {
+  font-size: $fs-300;
+}
+.fs-200 {
+  font-size: $fs-200;
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+  line-height: 1.1;
+}
