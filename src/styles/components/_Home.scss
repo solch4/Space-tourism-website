@@ -5,7 +5,7 @@
 
   background-size: cover;
   background-position: center bottom;
-  background-image: url(../../assets/home/background-home-mobile.jpg);
+  background-image: url(../../../public/assets/home/background-home-mobile.jpg);
 }
 
 .home-btn {
@@ -37,14 +37,14 @@
 @media (min-width: 35em) {
   .body-home {
     background-position: center;
-    background-image: url(../../assets/home/background-home-tablet.jpg);
+    background-image: url(../../../public/assets/home/background-home-tablet.jpg);
   }
 }
 
 // desktop
 @media (min-width: 55em) {
   .body-home {
-    background-image: url(../../assets/home/background-home-desktop.jpg);
+    background-image: url(../../../public/assets/home/background-home-desktop.jpg);
   }
   .grid-container--home {
     padding-bottom: max(6rem, 15vh);

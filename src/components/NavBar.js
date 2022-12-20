@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/shared/logo.svg";
-import close from "../assets/shared/icon-close.svg";
-import hamburger from "../assets/shared/icon-hamburger.svg";
 
 function NavBar() {
+  const logo = 'assets/shared/logo.svg'
+  const close = 'assets/shared/icon-close.svg'
+  const hamburger = 'assets/shared/icon-hamburger.svg'
+  
   const { pathname } = useLocation();
   const [primaryNavState, setprimaryNavState] = useState(false);
   const [navToggleState, setnavToggleState] = useState(false);
