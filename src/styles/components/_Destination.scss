@@ -1,0 +1,104 @@
+.body-destination {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+
+  background-size: cover;
+  background-position: center bottom;
+  background-image: url(../../../public/assets/destination/background-destination-mobile.jpg);
+}
+
+.numbered-title {
+  > span {
+    color: $clr-white-25;
+    margin-right: 1em;
+    font-weight: 700;
+  }
+}
+
+.tab-list {
+  list-style: none;
+  > * {
+    border: 0;
+    border-bottom: 0.2em solid transparent;
+    padding-bottom: 0.75em;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      border-color: $clr-white-50;
+    }
+  }
+  > .active {
+    border-color: $clr-white !important;
+  }
+}
+
+.destination-extra-info {
+  flex-direction: column;
+  gap: 2rem;
+  border-top: 1px solid $clr-white-25;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  p {
+    font-size: 1.75rem;
+  }
+}
+
+.grid-container--destination {
+  @include flow($flow-space: 2rem);
+  grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content";
+  > .numbered-title {
+    grid-area: title;
+  }
+  > img {
+    grid-area: image;
+    max-width: 60%;
+  }
+  > .tab-list {
+    grid-area: tabs;
+  }
+  > .destination-info {
+    grid-area: content;
+  }
+}
+
+// tablet
+@media (min-width: 35em) {
+  .body-destination {
+    background-position: center;
+    background-image: url(../../../public/assets/destination/background-destination-tablet.jpg);
+  }
+  .numbered-title {
+    justify-self: start;
+  }
+  .destination-extra-info {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+// desktop
+@media (min-width: 55em) {
+  .body-destination {
+    background-image: url(../../../public/assets/destination/background-destination-desktop.jpg);
+  }
+  .grid-container--destination {
+    justify-items: start;
+    align-content: center;
+    grid-template-areas:
+      ". title title ."
+      ". image tabs ."
+      ". image content .";
+    > img {
+      max-width: 90%;
+    }
+  }
+  .destination-extra-info {
+    @include flex($gap: min(5vw, 5rem));
+    justify-content: flex-start;
+  }
+}

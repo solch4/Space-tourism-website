@@ -49,6 +49,13 @@
   .grid-container--home {
     padding-bottom: max(6rem, 15vh);
     align-items: end;
+    > *:first-child {
+      grid-column: 2;
+    }
+    > *:last-child {
+      grid-column: 3;
+      margin-left: auto;
+    }
   }
   .home-btn {
     padding: 2em;
