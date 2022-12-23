@@ -54,6 +54,9 @@ $ff-sans-normal: "Barlow", sans-serif;
 .flow {
   @include flow();
 }
+.flow--space-small {
+  @include flow(.75rem);
+}
 
 .container {
   padding-inline: 2em;
