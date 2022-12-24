@@ -18,7 +18,7 @@
   > h1 {
     grid-area: title;
   }
-  > img {
+  > picture {
     grid-area: image;
     width: 60%;
     border-bottom: 1px solid $clr-white-25;
@@ -87,7 +87,7 @@
       ". title  image ."
       ". content image ."
       ". slider image .";
-    > img {
+    > picture {
       width: 90%;
       justify-self: end
     }

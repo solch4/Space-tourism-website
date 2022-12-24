@@ -28,10 +28,22 @@ function Destination() {
         <h1 className="numbered-title uppercase fs-500 ff-sans-cond letter-spacing-1">
           <span aria-hidden="true">01</span>Pick your destination
         </h1>
-        <img src={selectedPlanet.images.png} alt={selectedPlanet.name} />
+        <picture>
+          <source
+            srcSet={selectedPlanet.images.webp}
+            type="image/webp"
+            alt={selectedPlanet.name}
+          />
+          <img src={selectedPlanet.images.png} alt={selectedPlanet.name} />
+        </picture>
         <ul className="tab-list flex fs-200 letter-spacing-2 ff-sans-cond uppercase">
           {destinations.map((d) => (
-            <li className={selectedPlanet.name === d.name ? "active" : null} onClick={handleClick} id={d.name} key={d.name}>
+            <li
+              className={selectedPlanet.name === d.name ? "active" : null}
+              onClick={handleClick}
+              id={d.name}
+              key={d.name}
+            >
               {d.name}
             </li>
           ))}
@@ -41,11 +53,15 @@ function Destination() {
           <p className="text-accent">{selectedPlanet.description}</p>
           <div className="destination-extra-info flex uppercase">
             <div>
-              <h3 className="fs-200 text-accent letter-spacing-3">Avg. distance</h3>
+              <h3 className="fs-200 text-accent letter-spacing-3">
+                Avg. distance
+              </h3>
               <p className="ff-serif">{selectedPlanet.distance}</p>
             </div>
             <div>
-              <h3 className="fs-200 text-accent letter-spacing-3">Est. travel time</h3>
+              <h3 className="fs-200 text-accent letter-spacing-3">
+                Est. travel time
+              </h3>
               <p className="ff-serif">{selectedPlanet.travel}</p>
             </div>
           </div>

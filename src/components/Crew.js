@@ -26,7 +26,14 @@ function Crew() {
         <h1 className="numbered-title uppercase fs-500 ff-sans-cond letter-spacing-1">
           <span aria-hidden="true">02</span>Meet your crew
         </h1>
-        <img src={selectedCrew.images.png} alt={selectedCrew.name} />
+        <picture>
+          <source
+            srcSet={selectedCrew.images.webp}
+            type="image/webp"
+            alt={selectedCrew.name}
+          />
+          <img src={selectedCrew.images.png} alt={selectedCrew.name} />
+        </picture>
         <div className="slider-small flex">
           {crew.map((d) => (
             <button
