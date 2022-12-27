@@ -83,13 +83,15 @@
   .grid-container--crew {
     align-content: center;
     justify-items: start;
+    grid-template-columns: minmax(2rem, 1fr) minmax(0, 50rem) minmax(0, 30rem) minmax(2rem, 1fr);
     grid-template-areas:
-      ". title  image ."
+      ". title   image ."
       ". content image ."
-      ". slider image .";
+      ". slider  image .";
     > picture {
-      width: 90%;
-      justify-self: end
+      grid-column: span 2;
+      max-width: 90%;
+      justify-self: center;
     }
   }
   .slider-small {

@@ -17,7 +17,6 @@ function Destination() {
 
   const handleClick = (e) => {
     const planet = destinations.find((d) => d.name === e.target.id);
-    // console.log('planet',planet);
     setSelectedPlanet(planet);
   };
 
@@ -36,19 +35,19 @@ function Destination() {
           />
           <img src={selectedPlanet.images.png} alt={selectedPlanet.name} />
         </picture>
-        <ul className="tab-list flex fs-200 letter-spacing-2 ff-sans-cond uppercase">
+        <div className="tab-list flex">
           {destinations.map((d) => (
-            <li
+            <button
               className={selectedPlanet.name === d.name ? "active" : null}
               onClick={handleClick}
               id={d.name}
               key={d.name}
             >
               {d.name}
-            </li>
+            </button>
           ))}
-        </ul>
-        <div className="destination-info">
+        </div>
+        <div className="destination-info flow">
           <h2 className="uppercase fs-800 ff-serif">{selectedPlanet.name}</h2>
           <p className="text-accent">{selectedPlanet.description}</p>
           <div className="destination-extra-info flex uppercase">

@@ -20,6 +20,11 @@
   list-style: none;
   > * {
     border: 0;
+    background: transparent;
+    text-transform: uppercase;
+    font-size: $fs-200;
+    font-family: $ff-sans-cond;
+    letter-spacing: 2.7px;
     border-bottom: 0.2em solid transparent;
     padding-bottom: 0.75em;
     cursor: pointer;
