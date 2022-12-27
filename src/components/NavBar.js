@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+const logo = "assets/shared/logo.svg";
+const close = "assets/shared/icon-close.svg";
+const hamburger = "assets/shared/icon-hamburger.svg";
 
 function NavBar() {
-  const logo = 'assets/shared/logo.svg'
-  const close = 'assets/shared/icon-close.svg'
-  const hamburger = 'assets/shared/icon-hamburger.svg'
-  
-  const { pathname } = useLocation();
   const [primaryNavState, setprimaryNavState] = useState(false);
   const [navToggleState, setnavToggleState] = useState(false);
   const handleClick = () => {
@@ -28,36 +26,26 @@ function NavBar() {
         <span className="sr-only">Menu</span>
       </button>
 
-      <nav>
-        <ul
-          id="primary-navigation"
-          data-visible={primaryNavState}
-          className="primary-navigation underline-indicators letter-spacing-2 flex ff-sans-cond uppercase"
-        >
-          <li className={pathname === "/" ? "active" : null}>
-            <Link to="/">
-              <span aria-hidden="true">00</span>Home
-            </Link>
-          </li>
+      <nav
+        id="primary-navigation"
+        data-visible={primaryNavState}
+        className="primary-navigation underline-indicators letter-spacing-2 flex ff-sans-cond uppercase"
+      >
+        <NavLink to="/">
+          <span aria-hidden="true">00</span>Home
+        </NavLink>
 
-          <li className={pathname === "/destination" ? "active" : null}>
-            <Link to="/destination">
-              <span aria-hidden="true">01</span>Destination
-            </Link>
-          </li>
+        <NavLink to="/destination">
+          <span aria-hidden="true">01</span>Destination
+        </NavLink>
 
-          <li className={pathname === "/crew" ? "active" : null}>
-            <Link to="/crew">
-              <span aria-hidden="true">02</span>Crew
-            </Link>
-          </li>
+        <NavLink to="/crew">
+          <span aria-hidden="true">02</span>Crew
+        </NavLink>
 
-          <li className={pathname === "/technology" ? "active" : null}>
-            <Link to="/technology">
-              <span aria-hidden="true">03</span>Technology
-            </Link>
-          </li>
-        </ul>
+        <NavLink to="/technology">
+          <span aria-hidden="true">03</span>Technology
+        </NavLink>
       </nav>
     </header>
   );
