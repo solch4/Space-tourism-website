@@ -54,6 +54,13 @@
   }
 }
 
+.crew-detail {
+  > p {
+    max-width: 50ch;
+    margin-inline: auto;
+  }
+}
+
 // tablet
 @media (min-width: 35em) {
   .body-crew {
@@ -68,11 +75,6 @@
       "slider"
       "image";
   }
-  .crew-detail {
-    > p {
-      max-width: 50ch;
-    }
-  }
 }
 
 // desktop
@@ -81,7 +83,7 @@
     background-image: url(../../../public/assets/crew/background-crew-desktop.jpg);
   }
   .grid-container--crew {
-    align-content: center;
+    // align-content: center;
     justify-items: start;
     grid-template-columns: minmax(2rem, 1fr) minmax(0, 50rem) minmax(0, 30rem) minmax(2rem, 1fr);
     grid-template-areas:
@@ -89,12 +91,19 @@
       ". content image ."
       ". slider  image .";
     > picture {
+      border: 0;
       grid-column: span 2;
-      max-width: 90%;
+      width: 100%;
       justify-self: center;
+      align-self: end;
     }
   }
   .slider-small {
     @include flex(1.5rem);
   }
+  .crew-detail {
+    > p {
+      margin-inline: 0;
+    }
+  }  
 }
