@@ -1,0 +1,100 @@
+.body-technology {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+
+  background-size: cover;
+  background-position: center bottom;
+  background-image: url(../../../public/assets/technology/background-technology-mobile.jpg);
+}
+
+.grid-container--technology {
+  @include flow($flow-space: 2rem);
+  padding-inline: 0;
+  column-gap: 0;
+  grid-template-columns:
+    1.5rem
+    minmax(0, 100rem)
+    1.5rem;
+  grid-template-areas:
+    ".     title       ."
+    "image image   image"
+    ".     slider      ."
+    ".     content     .";
+  > h1 {
+    grid-area: title;
+  }
+  > picture {
+    grid-area: image;
+    max-width: 100%;
+  }
+  > .slider-big {
+    grid-area: slider;
+  }
+  > .technology-detail {
+    grid-area: content;
+  }
+}
+
+.slider-big > * {
+  font-size: $fs-600;
+  font-family: $ff-serif;
+  aspect-ratio: 1;
+  padding: 0.75em;
+  display: grid;
+  place-content: center;
+  background: transparent;
+  border-radius: 50%;
+  border: 1px solid $clr-white-25;
+  cursor: pointer;
+  transition: 0.1s;
+  &:hover,
+  &:focus {
+    border-color: $clr-white;
+  }
+  &.active {
+    background: $clr-white;
+    color: $clr-dark;
+  }
+}
+
+.technology-detail {
+  p {
+    max-width: 50ch;
+  }
+}
+
+// tablet
+@media (min-width: 35em) {
+  .body-technology {
+    background-position: center;
+    background-image: url(../../../public/assets/technology/background-technology-tablet.jpg);
+  }
+}
+
+// desktop
+@media (min-width: 55em) {
+  .body-technology {
+    background-image: url(../../../public/assets/technology/background-technology-desktop.jpg);
+  }
+  .grid-container--technology {
+    column-gap: 2rem;
+    align-content: center;
+    justify-items: start;
+    grid-template-columns:
+      minmax(2rem, 1fr)
+      minmax(0, 6rem) minmax(0, 44rem) minmax(0, 30rem)
+      minmax(2rem, 1fr);
+    grid-template-areas:
+      ". title  title   title ."
+      ". slider content image .";
+    > picture {
+      grid-column: span 2;
+      justify-self: end;
+    }
+  }
+  .slider-big {
+    @include flex(2rem);
+    flex-direction: column;
+  }
+}
