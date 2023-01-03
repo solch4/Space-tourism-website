@@ -35,7 +35,7 @@ function Destination() {
           />
           <img src={selectedPlanet.images.png} alt={selectedPlanet.name} />
         </picture>
-        <div className="tab-list flex">
+        <div className="text-accent tab-list flex">
           {destinations.map((d) => (
             <button
               className={selectedPlanet.name === d.name ? "active" : null}
@@ -47,7 +47,7 @@ function Destination() {
             </button>
           ))}
         </div>
-        <div className="destination-info flow">
+        <div className="destination-info flow--space-small">
           <h2 className="uppercase fs-800 ff-serif">{selectedPlanet.name}</h2>
           <p className="text-accent">{selectedPlanet.description}</p>
           <div className="destination-extra-info flex uppercase">

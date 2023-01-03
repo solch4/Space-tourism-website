@@ -48,7 +48,7 @@ function Crew() {
         </div>
         <div className="crew-detail flow">
           <div className="flow--space-small">
-            <h2 className="uppercase fs-600 ff-serif">{selectedCrew.role}</h2>
+            <h2 className="text-white-50 uppercase fs-600 ff-serif">{selectedCrew.role}</h2>
             <h3 className="uppercase fs-700 ff-serif">{selectedCrew.name}</h3>
           </div>
           <p className="text-accent">{selectedCrew.bio}</p>

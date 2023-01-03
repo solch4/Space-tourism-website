@@ -8,7 +8,15 @@
   background-image: url(../../../public/assets/home/background-home-mobile.jpg);
 }
 
+.grid-container--home {
+  overflow: hidden;
+  p {
+    max-width: 50ch;
+  }
+}
+
 .home-btn {
+  margin-top: min(8vh, 4rem);
   position: relative;
   display: inline-grid;
   place-items: center;
@@ -59,5 +67,6 @@
   }
   .home-btn {
     padding: 2em;
+    margin: 0;
   }
 }

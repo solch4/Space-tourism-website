@@ -6,12 +6,12 @@ function Home() {
   return (
     <div className="body-home">
       <NavBar />
-      <div className="grid-container grid-container--home">
+      <div className="text-accent grid-container grid-container--home">
         <div>
-          <h1 className="uppercase fs-500 ff-sans-cond letter-spacing-1">
-            So, you want to travel to
+          <h1 className="uppercase">
+            <span className="fs-500 ff-sans-cond letter-spacing-1">So, you want to travel to</span>
             <br />
-            <span className="fs-900 ff-serif">space</span>
+            <span className="text-white fs-900 ff-serif">space</span>
           </h1>
           <p>
             Let’s face it; if you want to go to space, you might as well
