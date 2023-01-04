@@ -1,0 +1,21 @@
+/* colors */
+$clr-dark: hsl(230, 35%, 7%);
+$clr-light: hsl(231, 77%, 90%);
+$clr-white: hsl(0, 0%, 100%);
+$clr-white-50: rgba($clr-white, .5);
+$clr-white-25: rgba($clr-white, .25);
+
+/* font-sizes */
+$fs-900: clamp(5rem, 15vw + 1rem, 9.375rem);
+$fs-800: clamp(3.5rem, 8vw + 1rem, 6.25rem);
+$fs-700: clamp(1.5rem, 5vw + 1rem, 3.5rem);
+$fs-600: clamp(1.25rem, 5.5vw, 2rem);
+$fs-500: clamp(1rem, 2.75vw, 1.75rem);
+$fs-400: clamp(0.9375rem, 2.25vw, 1.125rem);
+$fs-300: 1rem;
+$fs-200: 0.875rem;
+
+/* font-families */
+$ff-serif: "Bellefair", serif;
+$ff-sans-cond: "Barlow Condensed", sans-serif;
+$ff-sans-normal: "Barlow", sans-serif;

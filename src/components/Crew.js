@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NavBar from "./NavBar";
+import SliderSmall from "./SliderSmall";
 import data from "../data/data.json";
 const { crew } = data;
 
@@ -34,21 +35,16 @@ function Crew() {
           />
           <img src={selectedCrew.images.png} alt={selectedCrew.name} />
         </picture>
-        <div className="slider-small flex">
-          {crew.map((d) => (
-            <button
-              className={selectedCrew.name === d.name ? "active" : null}
-              onClick={handleClick}
-              id={d.name}
-              key={d.name}
-            >
-              <span className="sr-only">{d.role}</span>
-            </button>
-          ))}
-        </div>
+        <SliderSmall
+          tabs={crew}
+          selectedTab={selectedCrew}
+          handler={handleClick}
+        />
         <div className="crew-detail flow">
           <div className="flow--space-small">
-            <h2 className="text-white-50 uppercase fs-600 ff-serif">{selectedCrew.role}</h2>
+            <h2 className="text-white-50 uppercase fs-600 ff-serif">
+              {selectedCrew.role}
+            </h2>
             <h3 className="uppercase fs-700 ff-serif">{selectedCrew.name}</h3>
           </div>
           <p className="text-accent">{selectedCrew.bio}</p>

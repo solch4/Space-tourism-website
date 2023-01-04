@@ -1,0 +1,32 @@
+@mixin flex($gap: 1rem) {
+  display: flex;
+  gap: $gap;
+}
+
+@mixin grid($gap: 1rem) {
+  display: grid;
+  gap: $gap;
+}
+
+@mixin flow($flow-space: 1rem) {
+  > *:where(:not(:first-child)) {
+    margin-top: $flow-space;
+  }
+}
+
+@mixin grid-container($container-gap: 2rem) {
+  display: grid;
+  column-gap: $container-gap;
+  place-items: center;
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  text-align: center;
+  padding-inline: 1.5rem;
+  padding-bottom: 4rem;
+  @media (min-width: 55em) {
+    padding-inline: 0;
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+    text-align: left;
+  }
+}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NavBar from "./NavBar";
+import TabList from "./TabList";
 import data from "../data/data.json";
 const { destinations } = data;
 
@@ -35,18 +36,11 @@ function Destination() {
           />
           <img src={selectedPlanet.images.png} alt={selectedPlanet.name} />
         </picture>
-        <div className="text-accent tab-list flex">
-          {destinations.map((d) => (
-            <button
-              className={selectedPlanet.name === d.name ? "active" : null}
-              onClick={handleClick}
-              id={d.name}
-              key={d.name}
-            >
-              {d.name}
-            </button>
-          ))}
-        </div>
+        <TabList
+          tabs={destinations}
+          selectedTab={selectedPlanet}
+          handler={handleClick}
+        />
         <div className="destination-info flow--space-small">
           <h2 className="uppercase fs-800 ff-serif">{selectedPlanet.name}</h2>
           <p className="text-accent">{selectedPlanet.description}</p>

@@ -1,59 +1,21 @@
 /* ==================================================================
-  CUSTOM PROPERTIES
-================================================================== */
-
-/* colors */
-$clr-dark: hsl(230, 35%, 7%);
-$clr-light: hsl(231, 77%, 90%);
-$clr-white: hsl(0, 0%, 100%);
-$clr-white-50: rgba($clr-white, .5);
-$clr-white-25: rgba($clr-white, .25);
-
-/* font-sizes */
-$fs-900: clamp(5rem, 15vw + 1rem, 9.375rem);
-$fs-800: clamp(3.5rem, 8vw + 1rem, 6.25rem);
-$fs-700: clamp(1.5rem, 5vw + 1rem, 3.5rem);
-$fs-600: clamp(1.25rem, 5.5vw, 2rem);
-$fs-500: clamp(1rem, 2.75vw, 1.75rem);
-$fs-400: clamp(0.9375rem, 2.25vw, 1.125rem);
-$fs-300: 1rem;
-$fs-200: 0.875rem;
-
-/* font-families */
-$ff-serif: "Bellefair", serif;
-$ff-sans-cond: "Barlow Condensed", sans-serif;
-$ff-sans-normal: "Barlow", sans-serif;
-
-/* ==================================================================
   UTILITY CLASSES
 ================================================================== */
 
-@mixin flex($gap: 1rem) {
-  display: flex;
-  gap: $gap;
-}
+/* layout */
 
 .flex {
   @include flex();
-}
-
-@mixin grid($gap: 1rem) {
-  display: grid;
-  gap: $gap;
 }
 
 .grid {
   @include grid();
 }
 
-@mixin flow($flow-space: 1rem) {
-  > *:where(:not(:first-child)) {
-    margin-top: $flow-space;
-  }
-}
 .flow {
   @include flow();
 }
+
 .flow--space-small {
   @include flow(.75rem);
 }
@@ -62,23 +24,6 @@ $ff-sans-normal: "Barlow", sans-serif;
   padding-inline: 2em;
   margin-inline: auto;
   max-width: 80rem;
-}
-
-@mixin grid-container($container-gap: 2rem) {
-  display: grid;
-  column-gap: $container-gap;
-  place-items: center;
-  width: 100%;
-  max-width: 80rem;
-  margin-inline: auto;
-  text-align: center;
-  padding-inline: 1.5rem;
-  padding-bottom: 4rem;
-  @media (min-width: 55em) {
-    padding-inline: 0;
-    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
-    text-align: left;
-  }
 }
 
 .grid-container {

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NavBar from "./NavBar";
+import SliderBig from "./SliderBig";
 import data from "../data/data.json";
 const { technology } = data;
 
@@ -41,18 +42,11 @@ function Technology() {
             alt={selectedTechnology.name}
           />
         </picture>
-        <div className="slider-big flex">
-          {technology.map((d, i) => (
-            <button
-              className={selectedTechnology.name === d.name ? "active" : null}
-              onClick={handleClick}
-              id={d.name}
-              key={d.name}
-            >
-              {++i}
-            </button>
-          ))}
-        </div>
+        <SliderBig
+          tabs={technology}
+          selectedTab={selectedTechnology}
+          handler={handleClick}
+        />
         <div className="technology-detail flow">
           <div className="flow--space-small">
             <h2 className="text-accent uppercase fs-300 ff-sans-cond letter-spacing-3">

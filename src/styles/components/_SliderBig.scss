@@ -1,0 +1,28 @@
+.slider-big > * {
+  font-size: $fs-600;
+  font-family: $ff-serif;
+  aspect-ratio: 1;
+  padding: 0.75em;
+  display: grid;
+  place-content: center;
+  background: transparent;
+  border-radius: 50%;
+  border: 1px solid $clr-white-25;
+  cursor: pointer;
+  transition: 0.1s;
+  &:hover,
+  &:focus {
+    border-color: $clr-white;
+  }
+  &.active {
+    background: $clr-white;
+    color: $clr-dark;
+  }
+}
+
+@media (min-width: 55em) {
+  .slider-big {
+    @include flex(2rem);
+    flex-direction: column;
+  }
+}

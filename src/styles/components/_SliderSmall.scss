@@ -1,0 +1,22 @@
+.slider-small > * {
+  height: clamp(10px, 2vw, 15px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 0;
+  background-color: $clr-white-25;
+  transition: 0.1s ease;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: $clr-white-50;
+  }
+  &.active {
+    background-color: $clr-white;
+  }
+}
+
+@media (min-width: 55em) {
+  .slider-small {
+    @include flex(1.5rem);
+  }
+}
