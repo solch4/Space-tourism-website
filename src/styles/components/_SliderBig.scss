@@ -2,6 +2,8 @@
   font-size: $fs-600;
   font-family: $ff-serif;
   aspect-ratio: 1;
+  width: clamp(2.5rem, 8vw, 4.5rem);
+  height: clamp(2.5rem, 8vw, 4.5rem);
   padding: 0.75em;
   display: grid;
   place-content: center;
