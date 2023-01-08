@@ -10,6 +10,13 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - View each page and be able to toggle between the tabs to see new information
 
+## Screenshots
+
+<img src="./screenshots/ss-desktop-home.png" />
+<img src="./screenshots/ss-desktop-destination.png" />
+<img src="./screenshots/ss-desktop-crew.png" />
+<img src="./screenshots/ss-desktop-technology.png" />
+
 ## Links
 
 - Solution URL: https://www.frontendmentor.io/solutions/space-tourism-multipage-website-Eeoj6x11tZ
